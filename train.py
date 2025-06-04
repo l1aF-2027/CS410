@@ -120,8 +120,15 @@ def run_validation(model, validation_ds, tokenizer_src, tokenizer_tgt, max_len, 
         writer.flush()
 
 def get_all_sentences(ds, lang):
+    
     for item in ds:
-        yield item['translation'][lang]
+        if lang == "English":
+            yield item["English"]
+        elif lang == "Vietnamese":
+            yield item["Vietnamese"]
+        else:
+            raise ValueError(f"Unsupported language: {lang}")
+
 
 def get_or_build_tokenizer(config, ds, lang):
     tokenizer_path = Path(config['tokenizer_file'].format(lang))
