@@ -1,0 +1,31 @@
+# PyTorch with CUDA support (adjust CUDA version as needed)
+# For CUDA 11.8
+torch>=2.0.0,<2.2.0
+torchvision>=0.15.0,<0.17.0
+torchaudio>=2.0.0,<2.2.0
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+# Alternative for CUDA 12.1 (uncomment if needed)
+# torch>=2.0.0,<2.2.0
+# torchvision>=0.15.0,<0.17.0
+# torchaudio>=2.0.0,<2.2.0
+# --extra-index-url https://download.pytorch.org/whl/cu121
+
+# Core ML libraries
+torchmetrics>=0.11.0,<1.3.0
+tensorboard>=2.12.0,<2.16.0
+
+# Hugging Face libraries
+datasets>=2.12.0,<2.17.0
+tokenizers>=0.13.0,<0.16.0
+
+# Progress bar and utilities
+tqdm>=4.65.0,<4.67.0
+pathlib2>=2.3.7; python_version<"3.4"
+
+# Additional utilities
+numpy>=1.21.0,<1.26.0
+pandas>=1.5.0,<2.2.0
+
+# Optional: For better performance
+accelerate>=0.20.0,<0.26.0
